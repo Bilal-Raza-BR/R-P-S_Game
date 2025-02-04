@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+        .navbar {
+            background: #333;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+        }
+        .choices {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            gap: 40px;
+            margin-block: 30px;
+        }
+        .choice {
+            width: 115px;
+            height: 115px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .choice img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            &:hover{
+                box-shadow: 0px 0px 4px 5px rgb(0, 0, 0);
+                transition: .1s ease-in-out;
+            }
+        }
+        .score {
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            gap: 50px;
+        }
+        .message {
+            font-size: 1.4rem;
+            margin: 15px 0;
+            padding: 10px;
+            background: rgb(6, 0, 26);
+            color: white;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        .result {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin-top: 20px;
+        }
+        /* .result div {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        } */
+
+        .user-choice,.computer-choice {
+            width: 185px;
+            height: 245px;
+            background-color: gainsboro;
+            /* background-image: url(./assets/paper.png); */
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            border: 5px solid rgb(31, 31, 31);
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .vs img {
+            height: 110px;
+        }
+
+
+        @media (max-width: 768px) {
+            .choices {
+                gap: 20px;
+            }
+            .choice {
+                width: 75px;
+                height: 75px;
+            }
+
+            
+            .message {
+                font-size: 1rem;
+            }
+
+            .result {
+                gap: 20px;
+            }
+            .result div {
+                width: 100px;
+                height: 110px;
+                font-size: 0.7rem;
+            }
+
+            .result .vs {
+                width: 50px;
+                height: 50px;
+            }
+            .vs img {
+                height: 100%;
+            }
+
+            .score h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">Rock Paper Scissors</div>
+    
+    <div class="choices">
+        <div class="choice" id="rock"><img src="./assets/rock.png" alt="Rock"></div>
+        <div class="choice" id="paper"><img src="./assets/paper.png" alt="Paper"></div>
+        <div class="choice" id="scissors"><img src="./assets/scissors.png" alt="Scissors"></div>
+    </div>
+    
+    <div class="score">
+
+        <div class="you">
+
+            <h3 id="userScore">0</h3>
+            <h3>You</h3>
+        
+        </div>
+
+        <div class="comp">
+            
+            <h3 id="compScore">0</h3>
+            <h3>Comp</h3>
+
+        </div>
+    </div>
+    
+    <div class="message" id="result">Make your move!</div>
+    
+    <div class="result">
+        <div class="user-choice">
+            <h2>Your</h2>
+            <h2>Choice</h2>
+        </div>
+        <div class="vs"><img src="./assets/vs.png" alt="vs"></div>
+        <div class="computer-choice">
+            <h2>Computer</h2>
+            <h2>Choice</h2>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
