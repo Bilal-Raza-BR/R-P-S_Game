@@ -104,7 +104,9 @@ const playGame = (userChoice) => { // parameter of playGame = userChoice and its
     // show the images in box VS
     uChoice.style.backgroundImage =  `url(./assets/${userChoice}.png)`
     cChoice.style.backgroundImage = `url(./assets/${CompChoice}.png)`
-
+    // Ye Meney kuch Change kia hy Waqas Bhai dekhlena 
+    uChoice.className = 'animate__animated animate__flip';
+    cChoice.className = 'animate__animated animate__flip';
     uChoice.innerHTML = '';
     cChoice.innerHTML = '';
 
