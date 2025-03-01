@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    
     <style>
         * {
             margin: 0;
@@ -82,7 +83,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         } */
 
-        .user-choice,.computer-choice {
+        #user-choice,#computer-choice {
             width: 185px;
             height: 245px;
             background-color: gainsboro;
@@ -139,14 +140,18 @@
             }
         }
     </style>
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 </head>
 <body>
     <div class="navbar">Rock Paper Scissors</div>
     
     <div class="choices">
-        <div class="choice" id="rock"><img src="./assets/rock.png" alt="Rock"></div>
-        <div class="choice" id="paper"><img src="./assets/paper.png" alt="Paper"></div>
-        <div class="choice" id="scissors"><img src="./assets/scissors.png" alt="Scissors"></div>
+        <div class="choice" id="rock" onclick="animat()"><img src="./assets/rock.png" alt="Rock"></div>
+        <div class="choice" id="paper" onclick="animat()"><img src="./assets/paper.png" alt="Paper"></div>
+        <div class="choice" id="scissors" onclick="animat()"><img src="./assets/scissors.png" alt="Scissors"></div>
     </div>
     
     <div class="score">
@@ -169,12 +174,12 @@
     <div class="message" id="result">Make your move!</div>
     
     <div class="result">
-        <div class="user-choice">
+        <div  id="user-choice">
             <h2>Your</h2>
             <h2>Choice</h2>
         </div>
         <div class="vs"><img src="./assets/vs.png" alt="vs"></div>
-        <div class="computer-choice">
+        <div id="computer-choice">
             <h2>Computer</h2>
             <h2>Choice</h2>
         </div>
