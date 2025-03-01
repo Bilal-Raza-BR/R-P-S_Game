@@ -1,8 +1,8 @@
 let userScore = 0;
 let compScore = 0;
 
-let uChoice = document.querySelector('.user-choice');
-let cChoice = document.querySelector('.computer-choice');
+let uChoice = document.querySelector('#user-choice');
+let cChoice = document.querySelector('#computer-choice');
 
 const userResult = document.querySelector('#userScore');
 const compResult = document.querySelector('#compScore');
@@ -104,6 +104,8 @@ const playGame = (userChoice) => { // parameter of playGame = userChoice and its
     // show the images in box VS
     uChoice.style.backgroundImage =  `url(./assets/${userChoice}.png)`
     cChoice.style.backgroundImage = `url(./assets/${CompChoice}.png)`
+   
+
 
     uChoice.innerHTML = '';
     cChoice.innerHTML = '';
@@ -142,6 +144,14 @@ const playGame = (userChoice) => { // parameter of playGame = userChoice and its
     }
 
 }
+function animat(){
+     
+     uChoice.className = 'animate__animated animate__flip'
+    cChoice.className = 'animate__animated animate__flip'
+setTimeout(() => {
+    uChoice.className = 'noClass'
+   cChoice.className = 'noClass'
+    
+}, 600);
 
-
-
+}
